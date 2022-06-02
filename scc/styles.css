@@ -153,6 +153,23 @@ ul {
     color: var(--accent-color);
 }
 
+.auth-icon-link {
+    display: inline-flex;
+}
+
+.auth-nav-icon {
+    width: 16px;
+    height: 12px;
+    display: inline-flex;
+    fill: var(--primery-text-color);
+}
+
+.auth-nav-icon.smartphone {
+    width: 10px;
+    height: 16px;
+    fill: var(--primery-text-color);
+}
+
 
 /* Hero */
 .hero {
@@ -211,12 +228,14 @@ ul {
 }
 
 .icon-list>li {
-    padding: 25px 100px;
     margin-bottom: var(--indent-cards);
     width: 270px;
     height: 120px;
     background-color: var(--bgc-team);
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-list>li:not(:last-child) {
@@ -323,8 +342,51 @@ ul {
 
 .team-text {
     margin-top: 10px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
+}
+
+.team-list-icon {
+    display: flex;
+    width: 206px;
+    height: 44px;
+}
+
+
+.team-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+
+.team-item-icon:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-icon-link {
+    width: 20px;
+    height: 20px;
+}
+
+.team-icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+    ;
+}
+
+.team-item-icon:hover,
+.team-item-icon:focus {
+    background-color: #2196F3;
+}
+
+.team-item-icon:hover .team-icon,
+.team-item-icon:focus .team-icon {
+    fill: #FFFFFF;
 }
 
 
