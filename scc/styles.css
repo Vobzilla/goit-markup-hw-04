@@ -75,7 +75,6 @@ ul {
 
 .title {
     color: var(--title-text-color);
-    text-align: center;
 }
 
 /* Logo */
@@ -131,6 +130,7 @@ ul {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
     color: var(--accent-color);
+    outline: none;
 }
 
 .auth-nav {
@@ -143,6 +143,9 @@ ul {
 }
 
 .auth-nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--primery-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -154,23 +157,18 @@ ul {
     color: var(--accent-color);
 }
 
-.auth-icon-link {
-    display: inline-flex;
-}
-
 .auth-nav-icon {
     width: 16px;
     height: 12px;
-    display: inline-flex;
-    fill: var(--primery-text-color);
+    fill: currentColor;
+    margin-right: 10px;
 }
 
-.auth-nav-icon.smartphone {
+.auth-nav-icon.mail {
     width: 10px;
     height: 16px;
-    fill: var(--primery-text-color);
+    fill: currentColor;
 }
-
 
 /* Hero */
 .hero {
@@ -359,7 +357,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     width: 44px;
     height: 44px;
 }
@@ -369,24 +366,29 @@ ul {
 }
 
 .team-icon-link {
-    width: 20px;
-    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    color: #AFB1B8;
 }
 
 .team-icon {
     width: 20px;
     height: 20px;
-    fill: #AFB1B8;
-    ;
+    fill: currentColor;
 }
 
-.team-item-icon:hover,
-.team-item-icon:focus {
+.team-icon-link:hover,
+.team-icon-link:focus {
     background-color: #2196F3;
+    outline: none;
 }
 
-.team-item-icon:hover .team-icon,
-.team-item-icon:focus .team-icon {
+.team-icon-link:hover .team-icon,
+.team-icon-link:focus .team-icon {
     fill: #FFFFFF;
 }
 
@@ -394,6 +396,7 @@ ul {
 
 .section-client {
     padding: var(--indent-section) 0;
+    text-align: center;
 }
 
 .client-list {
@@ -402,13 +405,9 @@ ul {
 }
 
 .client-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
+
 }
 
 .client-item:not(:last-child) {
@@ -417,21 +416,30 @@ ul {
 
 
 .client-link {
-    width: 106px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
 }
 
 .client-icon {
     width: 106px;
     height: 60px;
-    fill: #AFB1B8;
+    fill: currentColor;
 }
 
-.client-item:hover {
+.client-link:hover,
+.client-link:focus {
     border-color: #2196F3;
+    outline: none;
 }
 
-.client-item:hover .client-icon {
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
     fill: #2196F3;
 }
 
@@ -467,6 +475,8 @@ ul {
 .button-portfolio:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
 }
 
 /* Project portfolio */
@@ -504,10 +514,25 @@ ul {
     line-height: 1.88;
 }
 
+.item-link.link {
+    display: block;
+}
+
+.item-link.link:hover,
+.item-link.link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
 /* Footer */
 .footer {
     padding: 60px 0;
     background-color: var(--accent-bgc);
+}
+
+.conteiner.footer {
+    display: flex;
+    align-items: baseline;
 }
 
 .web-logo.footers {
@@ -531,4 +556,59 @@ ul {
     font-size: 14px;
     line-height: 1.71;
     font-style: normal
+}
+
+.fotter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+    width: 206px;
+    height: 80px;
+}
+
+.text-fotter-wrapper {
+    width: 144px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-color)
+}
+
+.footer-soc-list {
+    display: flex;
+    width: 206px;
+    height: 44px;
+}
+
+.footer-soc-item {
+    width: 44px;
+    height: 44px;
+}
+
+.footer-soc-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-soc-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+    background-color: #2196F3;
+    outline: none;
 }
