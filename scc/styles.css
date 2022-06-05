@@ -222,14 +222,11 @@ ul {
     padding: var(--indent-section) 0;
 }
 
-.icon-list {
+.featurees-icon {
     display: flex;
-}
-
-.icon-list>li {
-    margin-bottom: var(--indent-cards);
     width: 270px;
     height: 120px;
+    margin-bottom: var(--indent-cards);
     background-color: var(--bgc-team);
     border-radius: 4px;
     display: flex;
@@ -237,7 +234,8 @@ ul {
     align-items: center;
 }
 
-.icon-list>li:not(:last-child) {
+
+.featurees-icon:not(:last-child) {
     margin-right: var(--indent-cards);
 }
 
@@ -399,6 +397,11 @@ ul {
     text-align: center;
 }
 
+.client-title {
+    font-size: 36px;
+    line-height: 1.16;
+}
+
 .client-list {
     display: flex;
     margin-top: 50px;
@@ -531,8 +534,10 @@ ul {
 }
 
 .conteiner.footer {
+    padding: 0;
     display: flex;
     align-items: baseline;
+
 }
 
 .web-logo.footers {
